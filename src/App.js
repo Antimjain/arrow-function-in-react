@@ -8,9 +8,9 @@ class ButtonWithBind extends Component {
     // this.toggleButton = this.toggleButton.bind(this);
   }
 
-  toggleButton() {
-    this.setState(prevState => ({ toggle: !prevState.toggle }));
-  }
+  // toggleButton() {
+  //   this.setState(prevState => ({ toggle: !prevState.toggle }));
+  // }
 
   toggleButton = () => { 
     this.setState(prevState => ({ toggle: !prevState.toggle }));
