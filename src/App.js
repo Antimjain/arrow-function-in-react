@@ -1,32 +1,43 @@
 import React, { Component } from "react";
+import axios from "axios";
+import {Table, Button} from 'react-bootstrap';
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
 
-class ButtonWithBind extends Component {
+// // https://backbencher.dev/react/hooks-interview-questions
+class App extends Component {
   constructor() {
     super();
-
-    this.state = { toggle: false };
-    // this.toggleButton = this.toggleButton.bind(this);
+    this.state = { 
+    
+    };
   }
 
-  // toggleButton() {
-  //   this.setState(prevState => ({ toggle: !prevState.toggle }));
-  // }
 
-  toggleButton = () => { 
-    this.setState(prevState => ({ toggle: !prevState.toggle }));
-  }
-  
+ 
+
+
   render() {
-    const toggle = this.state.toggle;
 
     return (
-      <div>
-        <button onClick={this.toggleButton}>
-          {toggle ? "ON" : "OFF"}
-        </button>
-      </div>
+      <Form>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+  
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     );
   }
 }
 
-export default ButtonWithBind;
+export default App;
+
+
